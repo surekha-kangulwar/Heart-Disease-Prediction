@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="stylenew.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#prediction">Heart Disease Prediction</a></li>
+            <li><a href="#info">Disease Information</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <heading style="font-size: 40px; text-align: center; display: block;">Disease Prediction</heading>
+        <form id="prediction-form">
+            <h1>Enter Patient Data:</h1>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min='1' max='120' required>
+
+            <label for="gender">Gender (0=Female, 1=Male):</label>
+            <input type="number" id="gender" name="gender" min="0" max="1" required>
+
+            <label for="chestPain">Chest Pain Type (0-3):</label>
+            <input type="number" id="chestPain" name="chestPain" min="'0" max="3" required>
+
+            <label for="restingBP">Resting BP:</label>
+            <input type="number" id="restingBP" name="restingBP" min='50' max='200' required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" id="cholesterol" name="cholesterol" min='100' max=600' required>
+
+            <label for="fastingBS">Fasting BS (0=False, 1=True):</label>
+            <input type="number" id="fastingBS" name="fastingBS" min="0" max="'1" required>
+
+            <label for="restECG">Rest ECG (0-2):</label>
+            <input type="number" id="restECG" name="restECG" min="0" max="2" required>
+
+            <label for="maxHeartRate">Max Heart Rate:</label>
+            <input type="number" id="maxHeartRate" name="maxHeartRate"  min="60" max="220" required>
+
+            <label for="exerciseInduced">Exercise Induced Angina (0=False, 1=True):</label>
+            <input type="number" id="exerciseInduced" name="exerciseInduced" min="0" max="1" required>
+
+            <label for="stDepression">ST Depression:</label>
+            <input type="number" step="0.1" id="stDepression" name="stDepression" min="0" max="10" required>
+
+            <label for="slopeOfST">Slope of ST (0-2):</label>
+            <input type="number" id="slopeOfST" name="slopeOfST" min="0" max="2" required>
+
+            <label for="majorVessels">Major Vessels (0-4):</label>
+            <input type="number" id="majorVessels" name="majorVessels" min="0" max="4" required>
+
+            <label for="thalassemia">Thalassemia (0-3):</label>
+            <input type="number" id="thalassemia" name="thalassemia" in="0" max="3" required>
+
+            <button type="submit" id="predictBtn">Predict</button>
+        </form>
+        <div id="output" class="output"></div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
